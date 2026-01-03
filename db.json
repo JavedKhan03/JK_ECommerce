@@ -1,0 +1,24 @@
+{
+    "products": [
+      {
+        "code": "P1001",
+        "name": "Samsung Galaxy S23",
+        "price": {
+          "value": 70000,
+          "formattedValue": "₹70,000"
+        },
+        "stock": {
+          "stockLevelStatus": "inStock"
+        }
+      }
+    ],
+    "users": [
+      {
+        "id": 1,
+        "username": "javed",
+        "password": "1234",
+        "token": "fake-jwt-token"
+      }
+    ],
+    "carts": []
+  }
