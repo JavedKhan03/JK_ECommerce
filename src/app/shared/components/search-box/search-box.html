@@ -1,0 +1,9 @@
+<div class="search-box">
+    <input
+      type="text"
+      [(ngModel)]="query"
+      placeholder="Search..."
+      (keydown.enter)="onSearch()"
+    />
+    <button class="bg-yellow-400" (click)="onSearch()">Search</button>
+  </div>
