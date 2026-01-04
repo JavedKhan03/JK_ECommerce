@@ -1,0 +1,44 @@
+<div>
+    <div *ngIf="products$ | async as products" class="px-3 mt-3 flex flex-wrap justify-evenly">
+        @for(product of
+        products; track product.id){
+            <div class="px-2 mb-10 rounded-2xl shadow-md text-center ">
+                <div class="p-4 m-2 bg-gray-200 rounded-2xl">
+                  <!-- <img class="rounded-2xl transform transition-transform ease-in-out hover:scale-105" src="../../../../asserts/images/shop-1.jpg" alt="Jacket"> -->
+            
+                  <a routerLink="/home/product/{{ product.id }}">
+                    <img
+                      class="rounded-2xl transform transition-transform ease-in-out hover:scale-105"
+                      [src]="'../../../../asserts/images/' + product.product_img"
+                      alt="Jacket"
+                    />
+                  </a>
+                </div>
+                <div class="text-center font-bold flex justify-center flex-col">
+                  <h5>
+                    <a routerLink="/home/product/{{ product.id }}">{{
+                      product.product_name
+                    }}</a>
+                  </h5>
+                  <p>{{ product.price }}</p>
+            
+                  @if (product.ratings > 0) {
+                  <ng-container>
+                    <!-- <app-ratings [score]="product.ratings"></app-ratings> -->
+                  </ng-container>
+                  }
+            
+                  <button
+                    class="flex bg-black text-white justify-center rounded-lg items-center w-full mt-2 py-2 gap-2 cursor-pointer hover:bg-gray-600 transition-colors" 
+                    
+                  >
+                    <!-- <fa-icon [icon]="faShoppingCart" class="text-lg"></fa-icon> -->
+                    <span class="text-sm">Add To Cart</span>
+                    
+                  </button>
+                </div>
+              </div>
+
+  }
+    </div>
+</div>
